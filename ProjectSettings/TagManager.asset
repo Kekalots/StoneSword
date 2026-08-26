@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:yousandi.cn,2023:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Trap
+  - Enemy
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - Sword
+  - Water
+  - UI
+  - Ground
+  - Player
+  - Enemy
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Sword
+    uniqueID: 927853087
+    locked: 0
+  - name: Player
+    uniqueID: 648734653
+    locked: 0
+  - name: Chest
+    uniqueID: 418925569
+    locked: 0
+  - name: GoundWeapon
+    uniqueID: 2286852057
+    locked: 0
+  - name: GroundCoin
+    uniqueID: 3059602889
+    locked: 0

@@ -1,0 +1,13 @@
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Ll]ogs/
+/[Mm]emoryCaptures/
+
+*.csproj
+*.sln
+*.suo
+*.user
+*.db
+.vs/
+UserSettings/

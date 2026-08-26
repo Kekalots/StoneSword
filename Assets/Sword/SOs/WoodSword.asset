@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:yousandi.cn,2023:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2317ce98e221b04fbf15fafdd5ee304, type: 3}
+  m_Name: WoodSword
+  m_EditorClassIdentifier: 
+  swordName: Wood Sword
+  swordAttackDamage: 10
+  swordCritRate: 0.1
+  swordCritDamage: 0.2
+  swordSprite: {fileID: 21300000, guid: d7b5e55dec110b74a93533a773139818, type: 3}
