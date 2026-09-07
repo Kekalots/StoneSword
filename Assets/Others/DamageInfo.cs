@@ -26,4 +26,3 @@ public struct DamageInfo
         isCrit = false;
     }
 }
-

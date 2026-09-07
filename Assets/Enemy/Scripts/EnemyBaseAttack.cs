@@ -83,4 +83,3 @@ public abstract class EnemyBaseAttack : MonoBehaviour
         }
     }
 }
-

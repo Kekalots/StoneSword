@@ -17,7 +17,7 @@ public class CameraFollow : MonoBehaviour
         Vector3 targetPos = new Vector3(
             playerTarget.position.x + offset.x,
             playerTarget.position.y + offset.y,
-            transform.position.z 
+            transform.position.z
         );
         transform.position = Vector3.Lerp(transform.position, targetPos, smoothSpeed * Time.deltaTime)+shakeOffset;
     }
@@ -32,7 +32,7 @@ public class CameraFollow : MonoBehaviour
         {
             shakeOffset.x = Random.Range(-shakeForce, shakeForce);
             shakeOffset.y = Random.Range(-shakeForce, shakeForce);
-            t+= Time.deltaTime;
+            t+= Time.unscaledDeltaTime;
             yield return null;
         }
         shakeOffset = Vector3.zero;

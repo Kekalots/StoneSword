@@ -17,11 +17,13 @@ public class InventoryItemManager : MonoBehaviour
     {
         Instance = this;
         playerHealth = GetComponent<PlayerHealth>();
+        if (inventoryUI == null) inventoryUI = FindObjectOfType<InventoryUI>();
+        if (itemTipUI == null) itemTipUI = FindObjectOfType<ItemTipUI>();
     }
 
     private void Start()
     {
-        inventoryUI.RefreshAllUi(itemList);
+        if (inventoryUI != null) inventoryUI.RefreshAllUi(itemList);
         ClearSelected();
     }
 
@@ -33,13 +35,13 @@ public class InventoryItemManager : MonoBehaviour
             return;
         }
         selectedSlotIndex = slotIndex;
-        itemTipUI.ShowTip(itemList[slotIndex]);
+        if (itemTipUI != null) itemTipUI.ShowTip(itemList[slotIndex]);
     }
 
     public void ClearSelected()
     {
         selectedSlotIndex = -1;
-        itemTipUI.HideTip();
+        if (itemTipUI != null) itemTipUI.HideTip();
     }
 
     public bool AddWeapon(SwordSO swordSo)
@@ -49,7 +51,7 @@ public class InventoryItemManager : MonoBehaviour
             return false;
         }
         itemList.Add(new InventoryItem(swordSo));
-        inventoryUI.RefreshAllUi(itemList);
+        if (inventoryUI != null) inventoryUI.RefreshAllUi(itemList);
         return true;
     }
 
@@ -60,7 +62,7 @@ public class InventoryItemManager : MonoBehaviour
             if (item.kind == InventoryItemKind.HealPotion && item.healValue == healAmount)
             {
                 item.stackCount += count;
-                inventoryUI.RefreshAllUi(itemList);
+                if (inventoryUI != null) inventoryUI.RefreshAllUi(itemList);
                 return true;
             }
         }
@@ -70,7 +72,7 @@ public class InventoryItemManager : MonoBehaviour
             return false;
         }
         itemList.Add(new InventoryItem(healAmount, count));
-        inventoryUI.RefreshAllUi(itemList);
+        if (inventoryUI != null) inventoryUI.RefreshAllUi(itemList);
         return true;
     }
 
@@ -88,7 +90,7 @@ public class InventoryItemManager : MonoBehaviour
                 itemList.RemoveAt(selectedSlotIndex);
                 ClearSelected();
             }
-            inventoryUI.RefreshAllUi(itemList);
+            if (inventoryUI != null) inventoryUI.RefreshAllUi(itemList);
         }
 
         else if (selectedItem.kind == InventoryItemKind.Weapon)
@@ -101,7 +103,7 @@ public class InventoryItemManager : MonoBehaviour
             WeaponNow.instance.EquipWeapon(selectedItem.swordData);
             itemList.RemoveAt(selectedSlotIndex);
             ClearSelected();
-            inventoryUI.RefreshAllUi(itemList);
+            if (inventoryUI != null) inventoryUI.RefreshAllUi(itemList);
         }
     }
 
@@ -113,6 +115,6 @@ public class InventoryItemManager : MonoBehaviour
 
         itemList.RemoveAt(selectedSlotIndex);
         ClearSelected();
-        inventoryUI.RefreshAllUi(itemList);
+        if (inventoryUI != null) inventoryUI.RefreshAllUi(itemList);
     }
 }

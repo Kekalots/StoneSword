@@ -55,6 +55,7 @@ public class PlayerMove : MonoBehaviour
         if (isGround && Input.GetKeyDown(KeyCode.Space))
         {
             rb.AddForce(Vector2.up * 900 * jumpForce);
+            if (SoundManager.Instance != null) SoundManager.Instance.PlayJump();
         }
     }
 

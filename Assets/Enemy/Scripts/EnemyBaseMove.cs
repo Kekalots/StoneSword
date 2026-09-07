@@ -6,7 +6,6 @@ public abstract class EnemyBaseMove : MonoBehaviour
 {
     public bool shouldStopPatrol = false;
 
-
     protected Rigidbody2D rb;
     protected GameObject playerGo;
     protected Transform playerTrans;
@@ -18,7 +17,7 @@ public abstract class EnemyBaseMove : MonoBehaviour
     public float moveSpeed;
     public float patrolRange;
     public bool doPatrol = true;
-    
+
     public float visionRadius;
     public LayerMask obstacleLayer=1<<6;
 

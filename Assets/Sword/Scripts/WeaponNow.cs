@@ -17,7 +17,6 @@ public class WeaponNow : MonoBehaviour
     {
         currentSword = newSword;
         RefreshDisplay(newSword);
-        
     }
     public void RefreshDisplay(SwordSO newSword)
     {

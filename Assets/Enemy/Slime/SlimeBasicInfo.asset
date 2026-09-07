@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5036470a19afe734f9b779afad52e699, type: 3}
   m_Name: SlimeBasicInfo
   m_EditorClassIdentifier: 
-  maxHP: 40
-  defense: 10
-  baseAttackDamage: 15
-  baseCritRate: 0.1
+  maxHP: 45
+  defense: 15
+  baseAttackDamage: 20
+  baseCritRate: 0.2
   baseCritDamage: 0.5

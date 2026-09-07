@@ -6,4 +6,3 @@ public interface IDamagable
 {
     void TakeDamage(DamageInfo damageInfo);
 }
-

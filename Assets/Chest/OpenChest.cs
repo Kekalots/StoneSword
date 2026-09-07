@@ -6,7 +6,7 @@ public class OpenChest : MonoBehaviour,IInteractable
 {
     public ChestType chestType;
 
-    [Header("±¦ÏäÍ¼Æ¬")]
+    [Header("å®ç®±å›¾ç‰‡")]
     public Sprite normalClosed;
     public Sprite normalOpened;
 
@@ -16,28 +16,28 @@ public class OpenChest : MonoBehaviour,IInteractable
     public Sprite cursedClosed;
     public Sprite cursedOpened;
 
-    [Header("µôÂäÔ¤ÖÆÌå")]
+    [Header("æ‰è½é¢„åˆ¶ä½“")]
     public List<GameObject> coinPrefabs;
     public List<GameObject> weaponPrefabs;
     public List<GameObject> potionPrefabs;
 
-    [Header("Éú³ÉÆ«ÒÆ")]
+    [Header("ç”Ÿæˆåç§»")]
     public Vector3 chestPosition;
     public Vector2 spawnOffset = new Vector2(1, -0.4f);
 
-    [Header("ÆÕÍ¨±¦ÏäÅäÖÃ")]
+    [Header("æ™®é€šå®ç®±é…ç½®")]
     public int normalMinCoin = 1;
     public int normalMaxCoin = 2;
     public float normalWeaponChance = 0.3f;
     public float normalPotionChance = 0.3f;
 
-    [Header("½ğÉ«±¦ÏäÅäÖÃ")]
+    [Header("é‡‘è‰²å®ç®±é…ç½®")]
     public int goldenMinCoin = 5;
     public int goldenMaxCoin = 6;
     public float goldenWeaponChance = 1f;
     public float goldenPotionChance = 1f;
 
-    [Header("×çÖä±¦ÏäÅäÖÃ")]
+    [Header("è¯…å’’å®ç®±é…ç½®")]
     public int cursedMinCoin =3;
     public int cursedMaxCoin = 4;
     public float cursedWeaponChance = 0.7f;
@@ -50,6 +50,16 @@ public class OpenChest : MonoBehaviour,IInteractable
     private SpriteRenderer sr;
 
     public BoxCollider2D cld;
+
+    public bool IsOpened => isOpened;
+
+    public void SetOpened()
+    {
+        isOpened = true;
+        RefreshChestSprite();
+        if (cld != null) cld.enabled = false;
+    }
+
     private void Awake()
     {
         sr = GetComponent<SpriteRenderer>();
@@ -184,8 +194,6 @@ public class OpenChest : MonoBehaviour,IInteractable
         buffMgr.AddBuff(selectedDebuff);
     }
 
-
-
     public string GetTipText()
     {
         if (isOpened)
@@ -208,4 +216,3 @@ public enum ChestType
     Golden,
     Cursed
 }
-

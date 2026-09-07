@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SlowDownBuff : BuffBase
 {
-    public float moveSpeedScale; 
+    public float moveSpeedScale;
     public float jumpForceScale;
 
     private float originMoveSpeed;

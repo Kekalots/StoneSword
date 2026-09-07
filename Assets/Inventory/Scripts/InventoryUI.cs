@@ -17,6 +17,7 @@ public class InventoryUI : MonoBehaviour
 
     private void Awake()
     {
+        if (playerInteract == null) playerInteract = FindObjectOfType<PlayerInteract>();
         if (panelRoot != null)
         {
             panelCanvasGroup = panelRoot.GetComponent<CanvasGroup>();
@@ -30,6 +31,15 @@ public class InventoryUI : MonoBehaviour
 
     private void LateUpdate()
     {
+        bool inDialogue = DialogueManager.Instance != null && DialogueManager.Instance.IsInDialogue;
+        bool inShop = ShopUI.Instance != null && ShopUI.Instance.IsShopOpen;
+        bool inPause = PauseMenu.Instance != null && PauseMenu.Instance.IsPaused;
+        bool inDeath = DeathUI.Instance != null && DeathUI.Instance.IsDeathShowing;
+        if (inDialogue || inShop || inPause || inDeath)
+        {
+            return;
+        }
+
         if (Input.GetKeyDown(KeyCode.I))
         {
             TogglePanel();
@@ -84,7 +94,7 @@ public class InventoryUI : MonoBehaviour
 
         if (!open)
         {
-            Time.timeScale = 1f;
+            PauseManager.ReleasePause();
             if (InventoryItemManager.Instance != null)
             {
                 InventoryItemManager.Instance.ClearSelected();
@@ -96,7 +106,7 @@ public class InventoryUI : MonoBehaviour
         }
         else
         {
-            Time.timeScale = 0;
+            PauseManager.RequestPause();
             if (interactTipText != null)
             {
                 interactTipText.SetActive(false);

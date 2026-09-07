@@ -117,11 +117,12 @@ MonoBehaviour:
   - {fileID: 4807764916698556342, guid: 68a8d94dc9866ad4b987661a44c8c1d2, type: 3}
   - {fileID: 4807764916698556342, guid: 68a8d94dc9866ad4b987661a44c8c1d2, type: 3}
   weaponPrefabs:
-  - {fileID: 1112061043191152792, guid: b7734d836c02be341bf72285f228eef9, type: 3}
+  - {fileID: 4984125681869578167, guid: 14aaa291e8a53ce4793bab2e02608684, type: 3}
   - {fileID: 1112061043191152792, guid: b7734d836c02be341bf72285f228eef9, type: 3}
   - {fileID: 7517265219868794986, guid: 8910948942b39e04d9a930622b051699, type: 3}
   potionPrefabs:
   - {fileID: 7947997220281155684, guid: 30a69c84646d1304ebd671e326ac37e5, type: 3}
+  - {fileID: 625828623812215598, guid: bb5e4047f0450b9498a30cb8431f74ce, type: 3}
   - {fileID: 625828623812215598, guid: bb5e4047f0450b9498a30cb8431f74ce, type: 3}
   chestPosition: {x: 0, y: 0, z: 0}
   spawnOffset: {x: 1, y: -0.4}
@@ -139,6 +140,7 @@ MonoBehaviour:
   cursedPotionChance: 0.7
   buffSprite1: {fileID: 21300000, guid: ff7c1f5999f15d944a56c1646249338c, type: 3}
   buffSprite2: {fileID: 21300000, guid: d604a9308963233409ba72272e4a1b54, type: 3}
+  cld: {fileID: 0}
 --- !u!61 &2218044704443760715
 BoxCollider2D:
   m_ObjectHideFlags: 0

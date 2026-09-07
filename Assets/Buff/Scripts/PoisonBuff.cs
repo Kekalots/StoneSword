@@ -20,12 +20,10 @@ public class PoisonBuff : BuffBase
 
     public override void OnApply(PlayerHealth playerHealth, PlayerMove playerMove)
     {
-
     }
 
     public override void OnUpdate(float deltaTime, PlayerHealth playerHealth, PlayerMove playerMove)
     {
-
         tickTimer -= deltaTime;
         if (tickTimer <= 0)
         {
@@ -37,6 +35,5 @@ public class PoisonBuff : BuffBase
 
     public override void OnRemove(PlayerHealth playerHealth, PlayerMove playerMove)
     {
-
     }
 }

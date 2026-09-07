@@ -5,7 +5,7 @@ using static Unity.VisualScripting.Dependencies.Sqlite.SQLite3;
 
 public class Potion : MonoBehaviour,IInteractable
 {
-    [Header("Ò©Ë®ÀàÐÍ")]
+    [Header("Ò©Ë®ï¿½ï¿½ï¿½ï¿½")]
     public PotionType potionType;
 
     public int healValue=20;

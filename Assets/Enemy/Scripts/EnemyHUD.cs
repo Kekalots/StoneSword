@@ -14,4 +14,3 @@ public class EnemyHUD : MonoBehaviour
         enemyHPBar.value = enemyHealth.currentHP / enemyHealth.enemyInfo.maxHP;
     }
 }
-

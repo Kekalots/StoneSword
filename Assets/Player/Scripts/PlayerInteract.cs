@@ -11,7 +11,12 @@ public class PlayerInteract : MonoBehaviour
     private void Awake()
     {
         currentTarget = null;
-        tipText.gameObject.SetActive(false);
+        if (tipText == null)
+        {
+            GameObject go = GameObject.Find("InteractTipText");
+            if (go != null) tipText = go.GetComponent<TMP_Text>();
+        }
+        if (tipText != null) tipText.gameObject.SetActive(false);
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -19,8 +24,11 @@ public class PlayerInteract : MonoBehaviour
         if (interact != null)
         {
             currentTarget = interact;
-            tipText.text = currentTarget.GetTipText();
-            tipText.gameObject.SetActive(true);
+            if (tipText != null)
+            {
+                tipText.text = currentTarget.GetTipText();
+                tipText.gameObject.SetActive(true);
+            }
         }
     }
 
@@ -32,11 +40,13 @@ public class PlayerInteract : MonoBehaviour
         if (interact != null)
         {
             currentTarget = interact;
-            tipText.text = currentTarget.GetTipText();
-            tipText.gameObject.SetActive(true);
+            if (tipText != null)
+            {
+                tipText.text = currentTarget.GetTipText();
+                tipText.gameObject.SetActive(true);
+            }
         }
     }
-
 
     private void OnTriggerExit2D(Collider2D other)
     {
@@ -46,7 +56,7 @@ public class PlayerInteract : MonoBehaviour
         if (interact == currentTarget)
         {
             currentTarget = null;
-            tipText.gameObject.SetActive(false);
+            if (tipText != null) tipText.gameObject.SetActive(false);
         }
     }
 
@@ -56,7 +66,7 @@ public class PlayerInteract : MonoBehaviour
         {
             currentTarget.Interact();
             currentTarget=null;
-            tipText.gameObject.SetActive(false);
+            if (tipText != null) tipText.gameObject.SetActive(false);
         }
     }
 }

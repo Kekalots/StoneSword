@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5036470a19afe734f9b779afad52e699, type: 3}
   m_Name: GhostBasicInfo
   m_EditorClassIdentifier: 
-  maxHP: 60
-  defense: 20
-  baseAttackDamage: 25
-  baseCritRate: 0.2
-  baseCritDamage: 0.5
+  maxHP: 100
+  defense: 30
+  baseAttackDamage: 30
+  baseCritRate: 0.3
+  baseCritDamage: 0.6

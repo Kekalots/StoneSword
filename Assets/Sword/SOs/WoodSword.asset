@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: WoodSword
   m_EditorClassIdentifier: 
   swordName: Wood Sword
+  price: 15
   swordAttackDamage: 10
   swordCritRate: 0.1
   swordCritDamage: 0.2

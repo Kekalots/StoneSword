@@ -6,8 +6,9 @@ using UnityEngine;
 public class SwordSO : ScriptableObject
 {
     public string swordName;
+    public int price;
     public int swordAttackDamage;
-    public float swordCritRate; 
+    public float swordCritRate;
     public float swordCritDamage;
     public Sprite swordSprite;
 }

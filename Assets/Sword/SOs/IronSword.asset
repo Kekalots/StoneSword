@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: IronSword
   m_EditorClassIdentifier: 
   swordName: Iron Wood
+  price: 50
   swordAttackDamage: 20
   swordCritRate: 0.2
   swordCritDamage: 0.3

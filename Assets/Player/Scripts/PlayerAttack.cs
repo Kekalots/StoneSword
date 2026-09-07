@@ -20,6 +20,7 @@ public class PlayerAttack : MonoBehaviour
             isAttackingLock = true;
             hitRange.enabled = true;
             anim.SetTrigger("isAttacking");
+            if (SoundManager.Instance != null) SoundManager.Instance.PlayAttack();
         }
     }
     public void OnAttackFinished()

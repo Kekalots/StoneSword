@@ -15,11 +15,31 @@ public class CoinManager : MonoBehaviour
         {
             instance = this;
         }
+
+        if (moneyText == null)
+        {
+            GameObject go = GameObject.Find("MoneyText");
+            if (go != null) moneyText = go.GetComponent<TMP_Text>();
+        }
     }
 
     public void AddCoin(int value)
     {
         money += value;
+        RefreshCoinUI();
+    }
+
+    public bool Spend(int value)
+    {
+        if (money < value) return false;
+        money -= value;
+        RefreshCoinUI();
+        return true;
+    }
+
+    public void SetMoney(int value)
+    {
+        money = value;
         RefreshCoinUI();
     }
 

@@ -65,6 +65,7 @@ public class GroundCoin : MonoBehaviour,IInteractable
     {
         int coinValue = GetCoinValue();
         CoinManager.instance.AddCoin(coinValue);
+        if (SoundManager.Instance != null) SoundManager.Instance.PlayCoin();
         Destroy(gameObject);
     }
 }
