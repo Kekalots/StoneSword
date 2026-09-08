@@ -1,9 +1,17 @@
 # 石中剑 Stone Sword
 
+![游戏画面](Assets/Screenshots/preview.png)
+
 一款基于**团结引擎**（Tuanjie Engine，Unity 2022.3 中国版）从零开发的 **2D 横版动作游戏 Demo**。包含战斗、背包、商店、传送门、存档、死亡等完整系统，覆盖「主菜单 → 关卡1 → 关卡2 → 通关」全流程。
 
 
 ---
+
+## 🎬 演示视频
+
+<video src="Assets/Demo/DemoVideo.mp4" controls preload="metadata" width="100%"></video>
+
+> 2 分 19 秒真实游玩过程：主菜单 → 战斗 → 商店 → 背包 → 存档 → 死亡 → 传送门 → 通关全流程。
 
 ## 🎮 玩法流程
 
