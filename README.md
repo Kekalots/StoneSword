@@ -11,9 +11,10 @@
 
 <video src="Assets/Demo/DemoVideo.mp4" controls preload="metadata" width="100%"></video>
 
-▶ **[点击观看演示视频（2 分 19 秒）](Assets/Demo/DemoVideo.mp4)**
+▶ **[下载演示视频（2 分 19 秒 / 6.9 MB）](https://github.com/Kekalots/StoneSword/raw/main/Assets/Demo/DemoVideo.mp4)**
 
 > 2 分 19 秒真实游玩过程：主菜单 → 战斗 → 商店 → 背包 → 存档 → 死亡 → 传送门 → 通关全流程。
+> 点击上方链接直接下载 mp4，本地双击播放。
 
 ## 🎮 玩法流程
 
